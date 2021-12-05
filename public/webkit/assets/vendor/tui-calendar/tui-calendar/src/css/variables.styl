@@ -1,0 +1,30 @@
+// Variables
+// default prefix
+css-prefix = 'tui-full-calendar-'
+// Dayname
+dayname = css-prefix + 'dayname-'
+
+weekday = css-prefix + 'weekday-'
+// DayGrid
+daygrid = css-prefix + 'daygrid-'
+// Time
+timegrid = css-prefix + 'timegrid-'
+time = css-prefix + 'time-'
+// Month
+month = css-prefix + 'month-'
+
+// Functions
+wh(w, h)
+    width: w
+    height: h
+
+pos(top, left)
+    top: top
+    left: left
+
+clearfix()
+    &:after
+        content: '';
+        display: block;
+        clear: both;
+    

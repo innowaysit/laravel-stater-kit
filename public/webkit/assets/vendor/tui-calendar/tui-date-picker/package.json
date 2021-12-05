@@ -1,0 +1,107 @@
+{
+  "_args": [
+    [
+      "tui-date-picker@4.2.0",
+      "/var/www/html/themes/webit"
+    ]
+  ],
+  "_from": "tui-date-picker@4.2.0",
+  "_id": "tui-date-picker@4.2.0",
+  "_inBundle": false,
+  "_integrity": "sha512-SDI3RRWOimhIAVRC23fpwxpp7q1wJu+fzNZYgOw2OyAYTa+R2oOjqUHzHEIK4OBMiasvHwWUyIztnAXoizQUeA==",
+  "_location": "/tui-date-picker",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "tui-date-picker@4.2.0",
+    "name": "tui-date-picker",
+    "escapedName": "tui-date-picker",
+    "rawSpec": "4.2.0",
+    "saveSpec": null,
+    "fetchSpec": "4.2.0"
+  },
+  "_requiredBy": [
+    "/tui-calendar"
+  ],
+  "_resolved": "https://registry.npmjs.org/tui-date-picker/-/tui-date-picker-4.2.0.tgz",
+  "_spec": "4.2.0",
+  "_where": "/var/www/html/themes/webit",
+  "author": {
+    "name": "NHN. FE Development Lab",
+    "email": "dl_javascript@nhn.com"
+  },
+  "bugs": {
+    "url": "https://github.com/nhn/tui.date-picker/issues"
+  },
+  "dependencies": {
+    "tui-time-picker": "^2.0.3"
+  },
+  "description": "TOAST UI Components: DatePicker",
+  "devDependencies": {
+    "@toast-ui/release-notes": "^2.0.1",
+    "css-loader": "^1.0.1",
+    "es5-shim": "^4.5.13",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-tui": "^2.2.0",
+    "eslint-loader": "^3.0.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "file-loader": "^0.9.0",
+    "istanbul-instrumenter-loader": "^1.0.0",
+    "jasmine-core": "^2.4.1",
+    "karma": "^4.3.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-coverage": "^1.1.1",
+    "karma-es5-shim": "^0.0.4",
+    "karma-jasmine": "^1.0.2",
+    "karma-junit-reporter": "^1.2.0",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webdriver-launcher": "git+https://github.com/nhn/karma-webdriver-launcher.git#v1.2.0",
+    "karma-webpack": "^4.0.2",
+    "mini-css-extract-plugin": "^0.8.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "prettier": "^1.19.1",
+    "style-loader": "^0.13.1",
+    "terser-webpack-plugin": "^2.2.3",
+    "tui-code-snippet": "^2.3.2",
+    "typescript": "^3.8.3",
+    "url-loader": "^0.5.7",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7",
+    "webpack-dev-server": "^3.8.0"
+  },
+  "files": [
+    "dist",
+    "index.d.ts"
+  ],
+  "homepage": "https://github.com/nhn/tui.date-picker#readme",
+  "keywords": [
+    "nhn",
+    "tui",
+    "component",
+    "calendar",
+    "date-picker",
+    "date-range-picker",
+    "tui-date-picker"
+  ],
+  "license": "MIT",
+  "main": "dist/tui-date-picker",
+  "name": "tui-date-picker",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nhn/tui.date-picker.git"
+  },
+  "scripts": {
+    "bundle": "webpack --mode=production && webpack --mode=production --minify && node tsBannerGenerator.js",
+    "doc": "tuidoc",
+    "doc:serve": "tuidoc --serv",
+    "note": "tui-note",
+    "serve": "webpack-dev-server --inline --hot -d",
+    "serve:ie8": "webpack-dev-server -d",
+    "test": "karma start --no-single-run",
+    "test:ne": "KARMA_SERVER=ne karma start"
+  },
+  "types": "index.d.ts",
+  "version": "4.2.0"
+}
