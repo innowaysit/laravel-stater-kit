@@ -5,7 +5,8 @@
 <hr />
 
 # TODO  
-    - Blog demo for roles and permissions
+    - Permission middleware registration in kernel
+    - Functionality Restriction demo pages with permissions
 ## Made with 
     - Laravel 8.x
     - larave/ui package
