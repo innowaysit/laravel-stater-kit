@@ -29,6 +29,12 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 Route::group([
+    'as'=>'frontend.'
+],function(){
+    Route::get('blogs', [BlogController::class,'index'])->name('blogs.index');
+});
+
+Route::group([
     'prefix'=>'admin',
     'as'=>'admin.'
 ], function(){
