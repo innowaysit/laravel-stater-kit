@@ -15,6 +15,11 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+                    <br>
+
+                    <a href="{{ route('admin.roles.index') }}" class="btn btn-primary m-1">Roles</a>
+                    <a href="{{ route('admin.permissions.index') }}" class="btn btn-primary m-1">Permissions</a>
+                    <a href="{{ route('admin.users.index') }}" class="btn btn-primary m-1">Users</a>
                 </div>
             </div>
         </div>
