@@ -11,3 +11,5 @@
 ## Made with 
     - Laravel 8.x
     - larave/ui package
+    - Webkit Admin template
+    - Spatie Permissions
