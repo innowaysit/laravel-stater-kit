@@ -4,9 +4,20 @@
 @section('content')
 
 
-    <h1>Create Blog</h1>
+    <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="{{ route('admin.dashboard.index') }}">Dashboard</a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('admin.blogs.index') }}">Blogs</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">New Blog</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
 
-    <div class="card p-4 my-3">
+    <div class="card p-4 m-2">
         <form action="{{ route('admin.blogs.store') }}" method="post" enctype="multipart/form-data">
             @csrf
 
