@@ -3,11 +3,24 @@
 
 @section('content')
 
-    <div class="container card p-4">
+    <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="{{ route('admin.dashboard.index') }}">Dashboard</a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('admin.roles.index') }}">Roles</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">Create Role</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <div class="row my-2 mx-2 card p-4">
         <form action="{{ route('admin.roles.store') }}" method="post">
             @csrf
             <div class="row justify-content-end">
-                <button type="submit" class="col-12 col-md-3 btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
             </div>
             <div class="row">
                 <div class="col-12 col-md-4">
