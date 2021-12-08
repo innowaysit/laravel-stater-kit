@@ -15,7 +15,8 @@
                 <div class="col-12">
                     <div class="mb-3">
                         <label for="name">User Name</label>
-                        <input id="name" name="name" type="text" class="form-control"  value="{{ old('', $user->name) }}"/>
+                        <input id="name" name="name" type="text" class="form-control"
+                            value="{{ old('', $user->name) }}" />
                         @error('name')
                             <span class="text-danger small" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -26,7 +27,8 @@
 
                 <div class="mb-3 col-12">
                     <label id="email_label" for="email">Email Address</label>
-                    <input id="email" name="email" type="email" class="form-control" value="{{ old('', $user->email) }}" />
+                    <input id="email" name="email" type="email" class="form-control"
+                        value="{{ old('', $user->email) }}" />
                     @error('email')
                         <span class="text-danger small" role="alert">
                             <strong>{{ $message }}</strong>
@@ -34,17 +36,17 @@
                     @enderror
                 </div>
 
-                <h3>Roles</h3>
-                @foreach ($roles as $role)
-                <div class="col-12 col-md-4">
-                    <div class="form-check mb-3">
-                        <input id="roles"
-                        @if(in_array($role->id, $user->roles->pluck('id')->toArray())) checked @endif
-                         name="roles[]" type="checkbox" class="form-check-input" value="{{ $role->id }}"
-                       />
-                        <label id="roles_label" class="form-check-label" for="roles">{{ $role->name }}</label>
-                    </div>
+                <div class="col-12 my-2">
+                    <h3>Roles</h3>
                 </div>
+                @foreach ($roles as $role)
+                    <div class="col-12 col-md-4">
+                        <div class="form-check mb-3">
+                            <input id="roles" @if (in_array($role->id, $user->roles->pluck('id')->toArray())) checked @endif name="roles[]" type="checkbox"
+                                class="form-check-input" value="{{ $role->id }}" />
+                            <label id="roles_label" class="form-check-label" for="roles">{{ $role->name }}</label>
+                        </div>
+                    </div>
                 @endforeach
             </div>
         </form>

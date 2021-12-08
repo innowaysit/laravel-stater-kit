@@ -47,7 +47,9 @@
                     <input id="password_confirmation" name="password_confirmation" type="password" class="form-control" />
                 </div>
 
-                <h3>Roles</h3>
+                <div class="col-12 my-2">
+                    <h3>Roles</h3>
+                </div>
                 @foreach ($roles as $role)
                     <div class="col-12 col-md-4">
                         <div class="form-check mb-3">

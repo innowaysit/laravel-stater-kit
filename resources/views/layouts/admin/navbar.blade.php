@@ -3,18 +3,16 @@
         <nav class="navbar navbar-expand-lg navbar-light p-0">
             <div class="iq-navbar-logo d-flex align-items-center justify-content-between">
                 <i class="ri-menu-line wrapper-menu"></i>
-                <a href="../backend/index.html" class="header-logo">
-                    <h4 class="logo-title text-uppercase">Webkit</h4>
-
+                <a href="" class="header-logo">
+                    <h4 class="logo-title text-uppercase">InnoWaysIT</h4>
                 </a>
             </div>
             <div class="navbar-breadcrumb">
                 <h5>Dashboard</h5>
             </div>
             <div class="d-flex align-items-center">
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
                     <i class="ri-menu-3-line"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -28,12 +26,11 @@
                             </div>
                         </li>
                         <li class="nav-item nav-icon search-content">
-                            <a href="#" class="search-toggle rounded" id="dropdownSearch"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a href="#" class="search-toggle rounded" id="dropdownSearch" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
                                 <i class="ri-search-line"></i>
                             </a>
-                            <div class="iq-search-bar iq-sub-dropdown dropdown-menu"
-                                aria-labelledby="dropdownSearch">
+                            <div class="iq-search-bar iq-sub-dropdown dropdown-menu" aria-labelledby="dropdownSearch">
                                 <form action="#" class="searchbox p-2">
                                     <div class="form-group mb-0 position-relative">
                                         <input type="text" class="text search-input font-size-12"
@@ -46,10 +43,9 @@
                         <li class="nav-item nav-icon nav-item-icon dropdown">
                             <a href="#" class="search-toggle dropdown-toggle" id="dropdownMenuButton2"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round"
-                                    class="feather feather-mail">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-mail">
                                     <path
                                         d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
                                     </path>
@@ -68,16 +64,14 @@
                                         </div>
                                         <div class="px-3 pt-0 pb-0 sub-card">
                                             <a href="#" class="iq-sub-card">
-                                                <div
-                                                    class="media align-items-center cust-card py-3 border-bottom">
+                                                <div class="media align-items-center cust-card py-3 border-bottom">
                                                     <div class="">
                                                         <img class="avatar-50 rounded-small"
                                                             src="{{ asset('webkit/assets/images/user/01.jpg') }}"
                                                             alt="01">
                                                     </div>
                                                     <div class="media-body ml-3">
-                                                        <div
-                                                            class="d-flex align-items-center justify-content-between">
+                                                        <div class="d-flex align-items-center justify-content-between">
                                                             <h6 class="mb-0">Emma Watson</h6>
                                                             <small class="text-dark"><b>12 : 47
                                                                     pm</b></small>
@@ -88,16 +82,14 @@
                                                 </div>
                                             </a>
                                             <a href="#" class="iq-sub-card">
-                                                <div
-                                                    class="media align-items-center cust-card py-3 border-bottom">
+                                                <div class="media align-items-center cust-card py-3 border-bottom">
                                                     <div class="">
                                                         <img class="avatar-50 rounded-small"
                                                             src="{{ asset('webkit/assets/images/user/02.jpg') }}"
                                                             alt="02">
                                                     </div>
                                                     <div class="media-body ml-3">
-                                                        <div
-                                                            class="d-flex align-items-center justify-content-between">
+                                                        <div class="d-flex align-items-center justify-content-between">
                                                             <h6 class="mb-0">Ashlynn Franci</h6>
                                                             <small class="text-dark"><b>11 : 30
                                                                     pm</b></small>
@@ -115,8 +107,7 @@
                                                             alt="03">
                                                     </div>
                                                     <div class="media-body ml-3">
-                                                        <div
-                                                            class="d-flex align-items-center justify-content-between">
+                                                        <div class="d-flex align-items-center justify-content-between">
                                                             <h6 class="mb-0">Kianna Carder</h6>
                                                             <small class="text-dark"><b>11 : 21
                                                                     pm</b></small>
@@ -127,8 +118,8 @@
                                                 </div>
                                             </a>
                                         </div>
-                                        <a class="right-ic btn btn-primary btn-block position-relative p-2"
-                                            href="#" role="button">
+                                        <a class="right-ic btn btn-primary btn-block position-relative p-2" href="#"
+                                            role="button">
                                             View All
                                         </a>
                                     </div>
@@ -138,10 +129,9 @@
                         <li class="nav-item nav-icon nav-item-icon dropdown">
                             <a href="#" class="search-toggle dropdown-toggle" id="dropdownMenuButton"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round"
-                                    class="feather feather-bell">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-bell">
                                     <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
                                     <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
                                 </svg>
@@ -158,16 +148,14 @@
                                         </div>
                                         <div class="px-3 pt-0 pb-0 sub-card">
                                             <a href="#" class="iq-sub-card">
-                                                <div
-                                                    class="media align-items-center cust-card py-3 border-bottom">
+                                                <div class="media align-items-center cust-card py-3 border-bottom">
                                                     <div class="">
                                                         <img class="avatar-50 rounded-small"
                                                             src="{{ asset('webkit/assets/images/user/01.jpg') }}"
                                                             alt="01">
                                                     </div>
                                                     <div class="media-body ml-3">
-                                                        <div
-                                                            class="d-flex align-items-center justify-content-between">
+                                                        <div class="d-flex align-items-center justify-content-between">
                                                             <h6 class="mb-0">Emma Watson</h6>
                                                             <small class="text-dark"><b>12 : 47
                                                                     pm</b></small>
@@ -178,16 +166,14 @@
                                                 </div>
                                             </a>
                                             <a href="#" class="iq-sub-card">
-                                                <div
-                                                    class="media align-items-center cust-card py-3 border-bottom">
+                                                <div class="media align-items-center cust-card py-3 border-bottom">
                                                     <div class="">
                                                         <img class="avatar-50 rounded-small"
                                                             src="{{ asset('webkit/assets/images/user/02.jpg') }}"
                                                             alt="02">
                                                     </div>
                                                     <div class="media-body ml-3">
-                                                        <div
-                                                            class="d-flex align-items-center justify-content-between">
+                                                        <div class="d-flex align-items-center justify-content-between">
                                                             <h6 class="mb-0">Ashlynn Franci</h6>
                                                             <small class="text-dark"><b>11 : 30
                                                                     pm</b></small>
@@ -205,8 +191,7 @@
                                                             alt="03">
                                                     </div>
                                                     <div class="media-body ml-3">
-                                                        <div
-                                                            class="d-flex align-items-center justify-content-between">
+                                                        <div class="d-flex align-items-center justify-content-between">
                                                             <h6 class="mb-0">Kianna Carder</h6>
                                                             <small class="text-dark"><b>11 : 21
                                                                     pm</b></small>
@@ -217,8 +202,8 @@
                                                 </div>
                                             </a>
                                         </div>
-                                        <a class="right-ic btn btn-primary btn-block position-relative p-2"
-                                            href="#" role="button">
+                                        <a class="right-ic btn btn-primary btn-block position-relative p-2" href="#"
+                                            role="button">
                                             View All
                                         </a>
                                     </div>
@@ -232,8 +217,9 @@
                                 <img src="{{ asset('webkit/assets/images/user/1.jpg') }}"
                                     class="img-fluid rounded-circle" alt="user">
                                 <div class="caption ml-3">
-                                    <h6 class="mb-0 line-height">Savannah Nguyen<i
-                                            class="las la-angle-down ml-2"></i></h6>
+                                    <h6 class="mb-0 line-height">{{ Auth::user()->name }}<i
+                                            class="las la-angle-down ml-2"></i>
+                                    </h6>
                                 </div>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-right border-none"
@@ -283,7 +269,10 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
                                     </svg>
-                                    <a href="../backend/auth-sign-in.html">Logout</a>
+                                    <form action="{{ route('logout') }}" method="post" class="d-flex">
+                                        @csrf
+                                        <button type="submit" class="btn">Logout</button>
+                                    </form>
                                 </li>
                             </ul>
                         </li>

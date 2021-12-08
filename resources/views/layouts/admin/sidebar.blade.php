@@ -36,7 +36,7 @@
                         <i class="las la-angle-right iq-arrow-right arrow-active"></i>
                         <i class="las la-angle-down iq-arrow-right arrow-hover"></i>
                     </a>
-                    <ul id="admin" class="iq-submenu collapsed" data-parent="#admin">
+                    <ul id="admin" class="iq-submenu collapse" data-parent="#admin">
 
                         <li class="">
                             <a href="{{ route('admin.roles.index') }}">
