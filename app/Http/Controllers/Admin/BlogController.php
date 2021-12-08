@@ -3,8 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Blog\StoreRequest;
+use App\Http\Requests\Blog\UpdateRequest;
 use App\Models\Blog;
 use Illuminate\Http\Request;
+use Str;
 
 class BlogController extends Controller
 {
@@ -14,7 +17,8 @@ class BlogController extends Controller
      *
      * @return void
      */
-    public function __construct() {
+    public function __construct()
+    {
         // apply middleares here
         $this->middleware('permission:blog-list|blog-create|blog-edit|blog-delete', ['only' => ['index', 'show']]);
         $this->middleware('permission:blog-create', ['only' => ['create', 'store']]);
@@ -29,7 +33,9 @@ class BlogController extends Controller
      */
     public function index()
     {
-        //
+        $blogs = Blog::all();
+
+        return view('blogs.index', compact('blogs'));
     }
 
     /**
@@ -39,7 +45,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        //
+        return view('blogs.create');
     }
 
     /**
@@ -48,9 +54,17 @@ class BlogController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreRequest $request)
     {
-        //
+        $photoPath = "images/default.png";
+        if ($request->has('photo')) {
+            $ext = $request->file('photo')->getClientOriginalExtension();
+            $photoPath = $request->file('photo')->storeAs('images', uniqid() . "." . $ext, 'public');
+        }
+
+        $blog = Blog::create($request->validated());
+        $blog->update(['photo' => $photoPath]);
+        return redirect()->route('admin.blogs.index')->withSuccess('Blog Created.');
     }
 
     /**
@@ -61,7 +75,7 @@ class BlogController extends Controller
      */
     public function show(Blog $blog)
     {
-        //
+        return view('blogs.show', compact('blog'));
     }
 
     /**
@@ -72,7 +86,7 @@ class BlogController extends Controller
      */
     public function edit(Blog $blog)
     {
-        //
+        return view('blogs.edit', compact('blog'));
     }
 
     /**
@@ -82,9 +96,18 @@ class BlogController extends Controller
      * @param  \App\Models\Blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Blog $blog)
+    public function update(UpdateRequest $request, Blog $blog)
     {
-        //
+        $photoPath = $blog->photo;
+        if ($request->has('photo')) {
+            $ext = $request->file('photo')->getClientOriginalExtension();
+            $photoPath = $request->file('photo')->storeAs('images', uniqid() . "." . $ext, 'public');
+        }
+
+        $blog->update($request->validated());
+        $blog->update(['photo' => $photoPath]);
+
+        return redirect()->route('admin.blogs.index')->withSuccess('Blog Updated.');
     }
 
     /**
