@@ -7,7 +7,6 @@ use App\Http\Requests\Admin\User\StoreRequest;
 use App\Http\Requests\Admin\User\UpdateRequest;
 use App\Models\Role;
 use App\Models\User;
-use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
@@ -42,6 +41,7 @@ class UserController extends Controller
     public function store(StoreRequest $request)
     {
         // return $request->all();
+
         $user = User::create($request->validated());
 
         $user->assignRole($request->roles);
@@ -69,7 +69,7 @@ class UserController extends Controller
     public function edit(User $user)
     {
         $roles = Role::all();
-        return view('admin.users.edit', compact('user','roles'));
+        return view('admin.users.edit', compact('user', 'roles'));
     }
 
     /**
