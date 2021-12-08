@@ -19,6 +19,9 @@
         href="{{ asset('webkit/assets/vendor/tui-calendar/tui-date-picker/dist/tui-date-picker.css') }}">
     <link rel="stylesheet"
         href="{{ asset('webkit/assets/vendor/tui-calendar/tui-time-picker/dist/tui-time-picker.css') }}">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+        integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 </head>
 
 <body class=" color-light ">
