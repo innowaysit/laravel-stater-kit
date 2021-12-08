@@ -1,9 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-    <div class="my-2">
-        <h1>Dashboard <i class="fas fa-meteor    "></i></h1>
-    </div>
+
     <div class="row my-2">
         <div class="col-12 col-md-4">
             <div class="card text-left">
