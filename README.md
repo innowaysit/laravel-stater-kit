@@ -2,11 +2,17 @@
 ## How to use
     - Click on Use this template button
     - follow normal project creation steps in git
+    - Once project is created
+    - cp .env.example .env
+    - composer install
+    - npm install && npm run dev
+    - php artisan key:generate
+    - php artisan migrate:fresh --seed
+    
 <hr />
 
 # TODO  
-    - Permission middleware registration in kernel
-    - Functionality Restriction demo pages with permissions
+    - WYSIWYG Editor for blog content
 ## Made with 
     - Laravel 8.x
     - larave/ui package
