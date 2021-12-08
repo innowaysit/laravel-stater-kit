@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\BlogController as AdminBlogController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\RoleController;
 use Illuminate\Support\Facades\Auth;
@@ -29,18 +30,20 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 Route::group([
-    'as'=>'frontend.'
-],function(){
-    Route::get('blogs', [BlogController::class,'index'])->name('blogs.index');
+    'as' => 'frontend.'
+], function () {
+    Route::get('blogs', [BlogController::class, 'index'])->name('blogs.index');
 });
 
 Route::group([
-    'prefix'=>'admin',
-    'as'=>'admin.'
-], function(){
+    'prefix' => 'admin',
+    'as' => 'admin.'
+], function () {
     Route::resource('roles', RoleController::class);
     Route::resource('permissions', PermissionController::class);
     Route::resource('users', UserController::class);
 
     Route::resource('blogs', AdminBlogController::class);
+
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
 });
