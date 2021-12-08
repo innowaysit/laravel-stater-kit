@@ -2,7 +2,7 @@
     <div class="iq-sidebar-logo d-flex align-items-center">
         <a href="" class="header-logo">
             {{-- <img src="{{ asset('webkit/assets/images/logo.svg') }}" alt="logo"> --}}
-            <h3 class="logo-title light-logo">{{ config('app.name') }}</h3>
+            <h3 class="logo-title light-logo text-capitalize">{{ config('app.name') }}</h3>
         </a>
         <div class="iq-menu-bt-sidebar ml-0">
             <i class="las la-bars wrapper-menu"></i>
