@@ -3,23 +3,10 @@
 
 @section('content')
 
-    <div class="row">
-        <div class="col-12">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb mb-0">
-                    <li class="breadcrumb-item"><a href="{{ route('admin.dashboard.index') }}">Dashboard</a></li>
-                    <li class="breadcrumb-item"><a href="{{ route('admin.profile.show', Auth::user()) }}">My Profile</a>
-                    </li>
-                    <li class="breadcrumb-item active" aria-current="page">My profile</li>
-                </ol>
-            </nav>
-        </div>
-    </div>
-
     <div class="row my-2">
         <div class="col-12 col-md-4">
             <div class="card">
-                <form action="{{ route('admin.profile.update', Auth::user()) }}" method="POST">
+                <form action="{{ route('profile.update', Auth::user()) }}" method="POST">
                     <div class="card-header d-flex justify-content-between">
                         <div class="header-title">
                             <h4 class="card-title">Edit Profile</h4>
@@ -74,7 +61,7 @@
 
         <div class="col-12 col-md-4">
             <div class="card">
-                <form action="{{ route('admin.profile.updatePassword', Auth::user()) }}" method="POST">
+                <form action="{{ route('profile.updatePassword', Auth::user()) }}" method="POST">
                     <div class="card-header d-flex justify-content-between">
                         <div class="header-title">
                             <h4 class="card-title">Update Password</h4>
@@ -107,7 +94,6 @@
                             <input type="password" name="password_confirmation" class="form-control" id="turl"
                                 placeholder="Confirm password">
                         </div>
-
 
                     </div>
                 </form>

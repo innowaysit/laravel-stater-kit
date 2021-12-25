@@ -86,7 +86,7 @@ class ProfileController extends Controller
 
         $user->update($request->validated());
 
-        return redirect()->route('admin.profile.show', $user)->withSuccess('Profile updated');
+        return redirect()->route('profile.show', $user)->withSuccess('Profile updated');
     }
 
     public function updatePassword(UpdatePasswordRequest $request, User $user)
@@ -97,7 +97,7 @@ class ProfileController extends Controller
 
         $user->update($request->validated());
 
-        return redirect()->route('admin.profile.show', $user)->withSuccess('Password Updated');
+        return redirect()->route('profile.show', $user)->withSuccess('Password Updated');
     }
 
     /**

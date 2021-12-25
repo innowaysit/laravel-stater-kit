@@ -3,16 +3,7 @@
 
 @section('content')
 
-    <div class="row">
-        <div class="col-12">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb mb-0">
-                    <li class="breadcrumb-item"><a href="{{ route('admin.dashboard.index') }}">Dashboard</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">My profile</li>
-                </ol>
-            </nav>
-        </div>
-    </div>
+
 
     <div class="row my-2">
         <div class="col-12 col-md-4">
@@ -26,7 +17,7 @@
                         <div class="ml-3">
                             <h4 class="mb-1">{{ $user->name }}</h4>
                             <p class="mb-2">UI/UX Designer</p>
-                            <a href="{{ route('admin.profile.edit', $user) }}" class="btn btn-primary font-size-14">Edit
+                            <a href="{{ route('profile.edit', $user) }}" class="btn btn-primary font-size-14">Edit
                                 profile</a>
                         </div>
                     </div>

@@ -35,18 +35,25 @@ Route::group([
 });
 
 Route::group([
-    'prefix' => 'admin',
-    'as' => 'admin.',
-    'middleware' => ['auth']
+    'middleware' => 'auth'
 ], function () {
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
+    // Admin Routes
+    Route::group([
+        'prefix' => 'admin',
+        'as' => 'admin.',
+        'middleware' => ['auth']
+    ], function () {
+        Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
 
-    Route::resource('roles', RoleController::class);
-    Route::resource('permissions', PermissionController::class);
-    Route::resource('users', UserController::class);
+        Route::resource('roles', RoleController::class);
+        Route::resource('permissions', PermissionController::class);
+        Route::resource('users', UserController::class);
 
-    Route::resource('blogs', AdminBlogController::class);
+        Route::resource('blogs', AdminBlogController::class);
+    });
+    // User routes
 
+    // Common routes
     Route::get('/profile/{user}', [ProfileController::class, 'show'])->name('profile.show');
     Route::get('/profile/{user}/edit', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::put('/profile/{user}', [ProfileController::class, 'update'])->name('profile.update');
