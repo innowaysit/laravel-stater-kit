@@ -65,6 +65,38 @@
                             <span class="ml-4">Manage Blog</span>
                         </a>
                     </li>
+
+                    @if (App\Models\Blog::count())
+                        <div id="sidebar-bottom" class="position-relative sidebar-bottom">
+                            <div class="card border-none mb-0 shadow-none">
+                                <div class="card-body p-0">
+                                    <div class="sidebarbottom-content">
+                                        <h5 class="mb-3">Active Blogs</h5>
+                                        <div id="circle-progress-6"
+                                            class="sidebar-circle circle-progress circle-progress-primary mb-4"
+                                            data-min-value="0" data-max-value="{{ App\Models\Blog::count() }}"
+                                            data-value="{{ App\Models\Blog::whereStatus('ACTIVE')->count() }}"
+                                            data-type="percent">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endif
+                @endrole
+
+                @role('USER')
+                    <li class="">
+                        <a href="" class="svg-icon">
+                            <svg class="svg-icon" width="25" height="25" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                            </svg>
+                            <span class="ml-4">Dashboard</span>
+                        </a>
+                    </li>
                 @endrole
 
                 <li class="">
@@ -76,19 +108,7 @@
             </ul>
         </nav>
 
-        <div id="sidebar-bottom" class="position-relative sidebar-bottom">
-            <div class="card border-none mb-0 shadow-none">
-                <div class="card-body p-0">
-                    <div class="sidebarbottom-content">
-                        <h5 class="mb-3">Active Blogs</h5>
-                        <div id="circle-progress-6" class="sidebar-circle circle-progress circle-progress-primary mb-4"
-                            data-min-value="0" data-max-value="{{ App\Models\Blog::count() }}"
-                            data-value="{{ App\Models\Blog::whereStatus('ACTIVE')->count() }}" data-type="percent">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
 
         <div class="pt-5 pb-2"></div>
     </div>
