@@ -17,10 +17,10 @@ class PermissionSeeder extends Seeder
         $permissions = [
             'admin-area-access',
 
-            'blog-list',
-            'blog-create',
-            'blog-edit',
-            'blog-delete'
+            'admin-blog-list',
+            'admin-blog-create',
+            'admin-blog-edit',
+            'admin-blog-delete'
         ];
 
         foreach ($permissions as $permission) {

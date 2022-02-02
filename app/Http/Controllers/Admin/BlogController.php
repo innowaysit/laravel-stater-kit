@@ -20,10 +20,10 @@ class BlogController extends Controller
     public function __construct()
     {
         // apply middleares here
-        $this->middleware('permission:blog-list|blog-create|blog-edit|blog-delete', ['only' => ['index', 'show']]);
-        $this->middleware('permission:blog-create', ['only' => ['create', 'store']]);
-        $this->middleware('permission:blog-edit', ['only' => ['edit', 'update']]);
-        $this->middleware('permission:blog-delete', ['only' => ['destroy']]);
+        $this->middleware('permission:admin-blog-list|admin-blog-create|admin-blog-edit|admin-blog-delete', ['only' => ['index', 'show']]);
+        $this->middleware('permission:admin-blog-create', ['only' => ['create', 'store']]);
+        $this->middleware('permission:admin-blog-edit', ['only' => ['edit', 'update']]);
+        $this->middleware('permission:admin-blog-delete', ['only' => ['destroy']]);
     }
 
     /**

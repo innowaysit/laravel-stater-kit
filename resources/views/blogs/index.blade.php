@@ -16,7 +16,7 @@
     </div>
 
 
-    @can('blog-create')
+    @can('admin-blog-create')
         <div class="row justify-content-end my-2">
             <div class="mx-3">
                 <a href="{{ route('admin.blogs.create') }}" class="btn btn-primary mt-2">Create Blog</a>
