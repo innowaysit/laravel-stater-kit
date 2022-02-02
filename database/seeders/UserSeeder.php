@@ -19,7 +19,13 @@ class UserSeeder extends Seeder
             'email' => 'admin@innowaysit.com',
             'password' => 'password',
         ]);
-
         $user->assignRole('ADMIN');
+
+        $user = User::create([
+            'name' => 'user',
+            'email' => 'user@innowaysit.com',
+            'password' => 'password',
+        ]);
+        $user->assignRole('USER');
     }
 }
