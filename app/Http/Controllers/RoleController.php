@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Permission;
-use App\Models\Role;
 use Illuminate\Http\Request;
 use Spatie\Permission\Models\Role as SpatieRole;
 
@@ -16,7 +15,7 @@ class RoleController extends Controller
      */
     public function index()
     {
-        $roles = Role::all();
+        $roles = SpatieRole::all();
         return view('roles.index', compact('roles'));
     }
 
@@ -44,7 +43,7 @@ class RoleController extends Controller
         $permissions = $request->permissions;
 
         $role = SpatieRole::create([
-            'name'=>$request->name
+            'name' => $request->name
         ]);
 
         $role->permissions()->sync($permissions);
@@ -55,10 +54,10 @@ class RoleController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Role  $role
+     * @param  \Spatie\Permission\Models\Role  $role
      * @return \Illuminate\Http\Response
      */
-    public function show(Role $role)
+    public function show(SpatieRole $role)
     {
         return view('roles.show', compact('role'));
     }
@@ -66,29 +65,29 @@ class RoleController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Role  $role
+     * @param  \Spatie\Permission\Models\Role  $role
      * @return \Illuminate\Http\Response
      */
-    public function edit(Role $role)
+    public function edit(SpatieRole $role)
     {
         $role->load('permissions');
         $permissions = Permission::all();
-        return view('roles.edit', compact('role','permissions'));
+        return view('roles.edit', compact('role', 'permissions'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Role  $role
+     * @param  \Spatie\Permission\Models\Role  $role
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Role $role)
+    public function update(Request $request, SpatieRole $role)
     {
         $permissions = $request->permissions;
 
         $role->update([
-            'name'=>$request->name
+            'name' => $request->name
         ]);
 
         $role->permissions()->sync($permissions);
@@ -99,10 +98,10 @@ class RoleController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Role  $role
+     * @param  \Spatie\Permission\Models\Role  $role
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Role $role)
+    public function destroy(SpatieRole $role)
     {
         $role->syncPermissions([]);
         $role->delete();
