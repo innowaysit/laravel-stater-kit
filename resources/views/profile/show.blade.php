@@ -2,16 +2,13 @@
 
 
 @section('content')
-
-
-
     <div class="row my-2">
         <div class="col-12 col-md-4">
             <div class="card card-block card-stretch card-height">
                 <div class="card-body">
                     <div class="d-flex align-items-center mb-3">
                         <div class="profile-img position-relative">
-                            <img src="{{ asset('webkit/assets/images/user/1.jpg') }}" class="img-fluid rounded avatar-110"
+                            <img src="{{ asset('storage/' . $user->photo) }}" class="img-fluid rounded avatar-110"
                                 alt="profile-image">
                         </div>
                         <div class="ml-3">
@@ -89,8 +86,4 @@
             </div>
         </div>
     </div>
-
-
-
-
 @endsection

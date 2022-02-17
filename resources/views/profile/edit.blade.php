@@ -2,11 +2,10 @@
 
 
 @section('content')
-
     <div class="row my-2">
         <div class="col-12 col-md-4">
             <div class="card">
-                <form action="{{ route('profile.update', Auth::user()) }}" method="POST">
+                <form action="{{ route('profile.update', Auth::user()) }}" method="POST" enctype="multipart/form-data">
                     <div class="card-header d-flex justify-content-between">
                         <div class="header-title">
                             <h4 class="card-title">Edit Profile</h4>
@@ -18,12 +17,25 @@
                         @method('PUT')
                         <div class="form-group">
                             <div class="crm-profile-img-edit position-relative">
-                                <img class="crm-profile-pic rounded avatar-100"
-                                    src="{{ asset('webkit/assets/images/user/11.png') }}" alt="profile-pic">
+                                <img id="output" class="crm-profile-pic rounded avatar-100"
+                                    src="{{ asset('storage/' . $user->photo) }}" alt="profile-pic">
                                 <div class="crm-p-image bg-primary">
                                     <i class="las la-pen upload-button"></i>
-                                    <input class="file-upload" type="file" accept="image/*">
+                                    <input class="file-upload" type="file" onchange="loadFile(event)" name="photo"
+                                        accept="image/*">
                                 </div>
+
+
+                                <script>
+                                    var loadFile = function(event) {
+                                        var reader = new FileReader();
+                                        reader.onload = function() {
+                                            var output = document.getElementById('output');
+                                            output.src = reader.result;
+                                        };
+                                        reader.readAsDataURL(event.target.files[0]);
+                                    };
+                                </script>
                             </div>
                             <div class="img-extension mt-3">
                                 <div class="d-inline-block align-items-center">
@@ -100,9 +112,4 @@
             </div>
         </div>
     </div>
-
-
-
-
-
 @endsection

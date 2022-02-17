@@ -84,7 +84,13 @@ class ProfileController extends Controller
             abort(403);
         }
 
+        $photoPath = $user->photo;
+        if ($request->has('photo')) {
+            $ext = $request->file('photo')->getClientOriginalName();
+            $photoPath = $request->file('photo')->storeAs('images', uniqid() . "." . $ext, 'public');
+        }
         $user->update($request->validated());
+        $user->update(['photo' => $photoPath]);
 
         return redirect()->route('profile.show', $user)->withSuccess('Profile updated');
     }
