@@ -6,8 +6,10 @@ use App\Http\Requests\Profile\UpdatePasswordRequest;
 use App\Http\Requests\Profile\UpdateRequest;
 use App\Models\User;
 use Auth;
+use Exception;
 use Hash;
 use Illuminate\Http\Request;
+use Str;
 
 class ProfileController extends Controller
 {
@@ -85,10 +87,20 @@ class ProfileController extends Controller
         }
 
         $photoPath = $user->photo;
+        $oldPhotoPath = $user->photo;
         if ($request->has('photo')) {
             $ext = $request->file('photo')->getClientOriginalName();
             $photoPath = $request->file('photo')->storeAs('images', uniqid() . "." . $ext, 'public');
+
+            //delete old photo here
+            if ($oldPhotoPath != "images/default.png") {
+                try {
+                    unlink('storage/' . $oldPhotoPath);
+                } catch (Exception $e) {
+                }
+            }
         }
+
         $user->update($request->validated());
         $user->update(['photo' => $photoPath]);
 
