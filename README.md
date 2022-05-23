@@ -15,7 +15,7 @@ Once project is created, clone to your system
     php artisan migrate:fresh --seed
     php artisan serve
 
-## Docker
+## Docker (Sail)
 
 ```
 cp .env.example .env
