@@ -36,29 +36,33 @@ docker run --rm -v $(pwd):/opt -w /opt laravelsail/php81-composer:latest compose
     - Webkit Admin template
     - Spatie Permissions
     - barryvdh/laravel-ide-helper
+    - Font Awesome 5 icons
 
 ## Screenshots
+### Home
+
+![profile](public/screenshots/001.png)
 
 ### Dashboard
 
-![profile](https://raw.githubusercontent.com/innowaysit/laravel-stater-kit/main/public/screenshots/00.png)
+![profile](public/screenshots/00.png)
 
 ### Profile
 
-![profile](https://raw.githubusercontent.com/innowaysit/laravel-stater-kit/main/public/screenshots/02.png)
+![profile](public/screenshots/02.png)
 
 ### Edit Profile
 
-![profile](https://raw.githubusercontent.com/innowaysit/laravel-stater-kit/main/public/screenshots/01.png)
+![profile](public/screenshots/01.png)
 
 ### Edit User with role
 
-![profile](https://raw.githubusercontent.com/innowaysit/laravel-stater-kit/main/public/screenshots/03.png)
+![profile](public/screenshots/03.png)
 
 ### Role list
 
-![profile](https://raw.githubusercontent.com/innowaysit/laravel-stater-kit/main/public/screenshots/04.png)
+![profile](public/screenshots/04.png)
 
 ### Role edit
 
-![profile](https://raw.githubusercontent.com/innowaysit/laravel-stater-kit/main/public/screenshots/05.png)
+![profile](public/screenshots/05.png)
