@@ -8,22 +8,28 @@
                 </a>
             </div>
             <div class="navbar-breadcrumb">
-                <h5>Dashboard</h5>
+                <h5>{{ config('app.name') }}</h5>
             </div>
             <div class="d-flex align-items-center">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-label="Toggle navigation">
                     <i class="ri-menu-3-line"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto navbar-list align-items-center">
+
+                        <li class="nav-item nav-icon dropdown caption-content">
+                            <i class="fa fa-wallet text-primary mr-1"></i><i class="fas fa-rupee-sign"></i>
+                            {{ '1,00,000' }}
+                        </li>
 
 
                         <li class="nav-item nav-icon dropdown caption-content">
                             <a href="#" class="search-toggle dropdown-toggle  d-flex align-items-center"
                                 id="dropdownMenuButton4" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">
-                                <img src="{{ asset('webkit/assets/images/user/1.jpg') }}"
+                                <img src="{{ asset('storage/' . Auth::user()->photo) }}"
                                     class="img-fluid rounded-circle" alt="user">
                                 <div class="caption ml-3">
                                     <h6 class="mb-0 line-height">{{ Auth::user()->name }}<i
@@ -59,7 +65,8 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
                                     </svg>
-                                    <form action="{{ route('logout') }}" method="post" class="d-flex">
+                                    <form action="{{ route('logout') }}" method="post" id="logout-form" class="d-flex"
+                                        onsubmit="return confirm('are you sure?');">
                                         @csrf
                                         <button type="submit" class="btn">Logout</button>
                                     </form>
@@ -71,4 +78,33 @@
             </div>
         </nav>
     </div>
+</div>
+
+
+{{-- Bottom navigation only shows on mobile screen --}}
+<div class="d-md-none ">
+    <nav class="p-0 fixed-bottom p-2 bg-white">
+        <div class="row">
+            <div class="col-4 text-center">
+                <a href="{{ route('home') }}" class="">
+                    <div class="logo-title text-uppercase text-muted text-center"><i class="fa fa-home"></i> <br>
+                        Home</div>
+                </a>
+            </div>
+            <div class="col-4 text-center">
+                <a href="{{ route('admin.dashboard.index') }}" class="">
+                    <div class="logo-title text-uppercase text-muted text-center"><i class="fa fa-tachometer-alt"></i>
+                        <br>
+                        Dashboard</div>
+                </a>
+            </div>
+            <div class="col-4 text-center">
+                <a href="{{ route('profile.show', auth()->user()) }}" class="">
+                    <div class="logo-title text-uppercase text-muted text-center"><i class="fa fa-user"></i> <br>
+                        Profile</div>
+                </a>
+            </div>
+        </div>
+
+    </nav>
 </div>
