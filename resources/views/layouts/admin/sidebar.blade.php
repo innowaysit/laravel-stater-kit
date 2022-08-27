@@ -11,16 +11,17 @@
     <div class="data-scrollbar" data-scroll="1">
         <nav class="iq-sidebar-menu">
             <ul id="iq-sidebar-toggle" class="iq-menu">
+                <li class="">
+                    <a href="{{ route('home') }}" class="svg-icon">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                        <span class="ml-4">Home</span>
+                    </a>
+                </li>
                 @role('ADMIN')
                     <li class="">
                         <a href="{{ route('admin.dashboard.index') }}" class="svg-icon">
-                            <svg class="svg-icon" width="25" height="25" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                                <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                            </svg>
-                            <span class="ml-4">Dashboards</span>
+                            <i class="fa fa-tachometer-alt"></i>
+                            <span class="ml-4">Dashboard</span>
                         </a>
                     </li>
 
@@ -103,6 +104,12 @@
                     <a href="{{ route('profile.show', auth()->user()->id) }}" class="svg-icon">
                         <i class="fas fa-user svg-icon"></i>
                         <span class="ml-4">Profile</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="{{ route('profile.show', auth()->user()->id) }}" class="svg-icon text-danger">
+                        <i class="fas fa-sign-out-alt fa-rotate-180 svg-icon"></i>
+                        <span class="ml-4">Log out</span>
                     </a>
                 </li>
             </ul>
