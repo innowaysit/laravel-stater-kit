@@ -24,6 +24,28 @@ docker run --rm -v $(pwd):/opt -w /opt laravelsail/php81-composer:latest compose
 ./vendor/bin/sail artisan key:generate
 ./vendor/bin/sail artisan migrate:fresh --seed
 ```
+### Passport Api installation and configuring client id and secret
+If you need the api for authentication run the below command
+```
+php artisan passport:install
+```
+
+This will give sample output
+e.g.
+```
+Personal access client created successfully.
+Client ID: 1
+Client secret: idYopC1DiScLLkjXN7tPh8Wu3QxfViME6nJJurtd
+Password grant client created successfully.
+Client ID: 2
+Client secret: qIiqHzXu58g7DQl8fKiSTFKRFcMzD0napwYi2W6l
+```
+
+Paste any one of these keys in your .env file as below
+```
+PASSPORT_PERSONAL_ACCESS_CLIENT_ID=1
+PASSPORT_PERSONAL_ACCESS_CLIENT_SECRET="idYopC1DiScLLkjXN7tPh8Wu3QxfViME6nJJurtd"
+```
 
 # TODO
 
