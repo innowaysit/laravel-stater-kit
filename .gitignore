@@ -16,3 +16,5 @@ yarn-error.log
 composer.lock
 package-lock.json
 .phpdoc
+/draft.yaml
+/.blueprint
