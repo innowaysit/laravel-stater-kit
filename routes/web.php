@@ -22,12 +22,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('/', 'welcome');
-Route::view('/blank', 'blank');
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+// theme routes
+Route::view('blank', 'webkit')->name('webkit');
+Route::view('mazer','mazer')->name('mazer');
 
 Route::group([
     'as' => 'frontend.'

@@ -106,6 +106,22 @@
                         <span class="ml-4">Profile</span>
                     </a>
                 </li>
+
+                <li class="">
+                    <a href="{{ route('webkit') }}" class="svg-icon">
+                        <i class="fa fa-file" aria-hidden="true"></i>
+                        <span class="ml-4">Blank (b4 webkit)</span>
+                    </a>
+                </li>
+
+                <li class="">
+                    <a href="{{ route('mazer') }}" class="svg-icon">
+                        <i class="fa fa-file" aria-hidden="true"></i>
+                        <span class="ml-4">Blank (b5 Mazer 2.0)</span>
+                    </a>
+                </li>
+
+
                 <li class="">
                     <a href="{{ route('profile.show', auth()->user()->id) }}" class="svg-icon text-danger">
                         <i class="fas fa-sign-out-alt fa-rotate-180 svg-icon"></i>
