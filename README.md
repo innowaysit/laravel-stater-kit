@@ -61,6 +61,9 @@ PASSPORT_PERSONAL_ACCESS_CLIENT_SECRET="idYopC1DiScLLkjXN7tPh8Wu3QxfViME6nJJurtd
     - Font Awesome 5 icons
 
 ## Screenshots
+### New B5 based Stunning Mazer 2.0 Admin theme added
+![dashboard](public/screenshots/07.png)
+
 ### Home
 
 ![profile](public/screenshots/001.png)
