@@ -56,9 +56,11 @@ PASSPORT_PERSONAL_ACCESS_CLIENT_SECRET="idYopC1DiScLLkjXN7tPh8Wu3QxfViME6nJJurtd
     - Laravel 9.x
     - larave/ui package
     - Webkit Admin template
-    - Spatie Permissions
+    - spatie/laravel-permission
     - barryvdh/laravel-ide-helper
+    - laravel-shift/blueprint
     - Font Awesome 5 icons
+    - Mazer 2.0 Admin template
 
 ## Screenshots
 ### New B5 based Stunning Mazer 2.0 Admin theme added
