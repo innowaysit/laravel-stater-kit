@@ -13,8 +13,8 @@
         </div>
     </div>
 
-    <div class="row my-2 justify-content-end">
-        <div class="mx-3">
+    <div class="row my-2">
+        <div class="mx-auto">
             <a href="{{ route('admin.users.create') }}" class="btn btn-primary">New User</a>
         </div>
     </div>
