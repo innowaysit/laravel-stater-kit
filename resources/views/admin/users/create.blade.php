@@ -1,8 +1,7 @@
-@extends('layouts.admin')
+@extends('layouts.mazer-admin')
 
 
 @section('content')
-
     <div class="row">
         <div class="col-12">
             <nav aria-label="breadcrumb">
@@ -19,8 +18,11 @@
     <div class="card mx-2 my-2 p-4">
         <form action="{{ route('admin.users.store') }}" method="post">
             @csrf
-            <div class="row justify-content-end">
-                <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="row mb-3">
+                <div class="col-12 clearfix">
+                    <div class="float-start">Create User</div>
+                    <button type="submit" class="btn btn-primary float-end">Submit</button>
+                </div>
             </div>
             <div class="row">
                 <div class="col-12">
@@ -75,5 +77,4 @@
             </div>
         </form>
     </div>
-
 @endsection

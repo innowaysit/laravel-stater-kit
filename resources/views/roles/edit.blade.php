@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.mazer-admin')
 
 
 @section('content')
@@ -21,7 +21,7 @@
             <form action="{{ route('admin.roles.update', $role->id) }}" method="post">
                 @csrf
                 @method('PUT')
-                <div class="row justify-content-end">
+                <div class="d-flex float-end">
                     <button type="submit" class="btn btn-primary">Update</button>
                 </div>
                 <div class="row">

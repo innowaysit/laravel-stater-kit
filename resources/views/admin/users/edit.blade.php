@@ -1,8 +1,7 @@
-@extends('layouts.admin')
+@extends('layouts.mazer-admin')
 
 
 @section('content')
-
     <div class="row">
         <div class="col-12">
             <nav aria-label="breadcrumb">
@@ -20,8 +19,10 @@
         <form action="{{ route('admin.users.update', $user->id) }}" method="post">
             @csrf
             @method('PUT')
-            <div class="row justify-content-end">
-                <button type="submit" class="btn btn-primary">Update</button>
+            <div class="row">
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary float-end">Update</button>
+                </div>
             </div>
             <div class="row">
 
@@ -55,8 +56,8 @@
                 @foreach ($roles as $role)
                     <div class="col-12 col-md-4">
                         <div class="form-check mb-3">
-                            <input id="roles" @if (in_array($role->id, $user->roles->pluck('id')->toArray())) checked @endif name="roles[]" type="checkbox"
-                                class="form-check-input" value="{{ $role->id }}" />
+                            <input id="roles" @if (in_array($role->id, $user->roles->pluck('id')->toArray())) checked @endif name="roles[]"
+                                type="checkbox" class="form-check-input" value="{{ $role->id }}" />
                             <label id="roles_label" class="form-check-label" for="roles">{{ $role->name }}</label>
                         </div>
                     </div>
@@ -64,5 +65,4 @@
             </div>
         </form>
     </div>
-
 @endsection

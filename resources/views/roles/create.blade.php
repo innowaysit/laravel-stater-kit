@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.mazer-admin')
 
 
 @section('content')
@@ -19,7 +19,7 @@
     <div class="row my-2 mx-2 card p-4">
         <form action="{{ route('admin.roles.store') }}" method="post">
             @csrf
-            <div class="row justify-content-end">
+            <div class="d-flex float-end">
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>
             <div class="row">
@@ -30,8 +30,8 @@
                     </div>
                 </div>
             </div>
-            <h3>Permissions</h3>
             <br>
+            <h3>Permissions</h3>
             <div class="row">
                 @foreach ($permissions as $permission)
                     <div class="col-12 col-md-4">
