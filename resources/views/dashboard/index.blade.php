@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.mazer-admin')
 
 @section('content')
 
@@ -7,7 +7,7 @@
             <div class="card text-left">
                 <div class="card-body">
                     <div class="d-flex align-items-center">
-                        <i class="fas fa-comment  svg-icon mr-3 text-secondary"></i>
+                        <i class="fas fa-comment  svg-icon me-4 text-secondary"></i>
                         <div class="pl-3 border-left">
                             <h5 class="mb-1">Blogs</h5>
                             <p class="mb-0">{{ $blogs }}</p>
@@ -21,7 +21,7 @@
             <div class="card text-left">
                 <div class="card-body">
                     <div class="d-flex align-items-center">
-                        <i class="fas fa-users-cog  svg-icon mr-3 text-secondary"></i>
+                        <i class="fas fa-users-cog  svg-icon me-4 text-secondary"></i>
                         <div class="pl-3 border-left">
                             <h5 class="mb-1">Roles</h5>
                             <p class="mb-0">{{ $roles }}</p>
@@ -35,7 +35,7 @@
             <div class="card text-left">
                 <div class="card-body">
                     <div class="d-flex align-items-center">
-                        <i class="fas fa-user-alt svg-icon mr-3 text-secondary"></i>
+                        <i class="fas fa-user-alt svg-icon me-4 text-secondary"></i>
                         <div class="pl-3 border-left">
                             <h5 class="mb-1">Users</h5>
                             <p class="mb-0">{{ $users }}</p>

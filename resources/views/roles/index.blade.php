@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.mazer-admin')
 
 
 @section('content')
@@ -21,7 +21,7 @@
     </div>
     <div class="row">
         <div class="col-12 table-responsive">
-            <table class="table table-hover table-light">
+            <table class="table table-hover">
                 <thead>
                     <tr>
                         <th>#</th>
