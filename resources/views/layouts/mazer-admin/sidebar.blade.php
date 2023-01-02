@@ -43,20 +43,20 @@
         <ul class="menu">
             <li class="sidebar-title">Menu</li>
 
-            <li class="sidebar-item active">
+            <li class="sidebar-item @if (Route::currentRouteName() == 'home') active @endif">
                 <a href="{{ route('home') }}" class='sidebar-link'>
                     <i class="fa fa-home"></i>
                     <span>Home</span>
                 </a>
             </li>
-            <li class="sidebar-item">
+            <li class="sidebar-item @if (Route::currentRouteName() == 'admin.dashboard.index') active @endif">
                 <a href="{{ route('admin.dashboard.index') }}" class='sidebar-link'>
                     <i class="fa fa-tachometer-alt"></i>
                     <span>Dashboard</span>
                 </a>
             </li>
 
-            <li class="sidebar-item  has-sub">
+            <li class="sidebar-item has-sub @if (in_array(Route::currentRouteName(), ['admin.roles.index', 'admin.permissions.index', 'admin.users.index'])) active @endif">
                 <a href="#" class='sidebar-link'>
                     <i class="fa fa-user-check"></i>
                     <span>Administration</span>
@@ -76,7 +76,7 @@
 
             <li class="sidebar-title">Profile</li>
 
-            <li class="sidebar-item ">
+            <li class="sidebar-item @if (Route::currentRouteName() == 'profile.edit') active @endif">
                 <a href="{{ route('profile.edit', auth()->user()->id) }}" class='sidebar-link'>
                     <i class="bi bi-person"></i>
                     <span>Profile</span>
