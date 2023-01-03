@@ -1,7 +1,8 @@
 @extends('layouts.mazer-admin')
-
+@section('heading')
+    Dashboard
+@endsection
 @section('content')
-
     <div class="row my-2">
         <div class="col-12 col-md-4">
             <div class="card text-left">
@@ -45,5 +46,4 @@
             </div>
         </div>
     </div>
-
 @endsection

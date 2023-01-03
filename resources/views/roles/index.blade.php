@@ -1,5 +1,8 @@
 @extends('layouts.mazer-admin')
 
+@section('heading')
+    Role management
+@endsection
 
 @section('content')
     <div class="row">
