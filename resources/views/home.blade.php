@@ -54,7 +54,7 @@
             </div>
             {{-- @endif --}}
             <div class="col-12 col-md-3 ">
-                <div class="card p-2"> <a href="{{ route('admin.dashboard.index') }}"
+                <div class="card p-2"> <a href="{{ route('profile.show', auth()->user()->id) }}"
                         class="d-flex justify-content-start btn ">
                         <div style=""  class="me-3"><i
                                 class="fas fa-sign-out-alt fa-rotate-180"></i></div>
