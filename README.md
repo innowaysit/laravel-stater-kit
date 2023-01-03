@@ -48,8 +48,8 @@ PASSPORT_PERSONAL_ACCESS_CLIENT_SECRET="idYopC1DiScLLkjXN7tPh8Wu3QxfViME6nJJurtd
 ```
 
 # TODO
-
-    - WYSIWYG Editor for blog content
+    - Multiple theme support
+    - API support
 
 ## Made with
 
@@ -63,33 +63,47 @@ PASSPORT_PERSONAL_ACCESS_CLIENT_SECRET="idYopC1DiScLLkjXN7tPh8Wu3QxfViME6nJJurtd
     - Mazer 2.0 Admin template
 
 ## Screenshots
-### New B5 based Stunning Mazer 2.0 Admin theme added
-![dashboard](public/screenshots/07.png)
+### New Bs5 based Stunning Mazer 2.0 Admin theme
+### Light Mode
+![theme](public/screenshots/07.png)
+### Dark Mode
+![dark_theme](public/screenshots/08.png)
 
 ### Home
 
-![profile](public/screenshots/001.png)
+![home](public/screenshots/00.png)
+
+### Login
+
+![login](public/screenshots/01.png)
+
+### Register
+
+![register](public/screenshots/02.png)
+
+### Home
+
+![home](public/screenshots/03.png)
 
 ### Dashboard
 
-![profile](public/screenshots/00.png)
+![dashboard](public/screenshots/04.png)
+
+### Role management
+
+![role_management](public/screenshots/05.png)
 
 ### Profile
 
-![profile](public/screenshots/02.png)
+![profile](public/screenshots/06.png)
 
-### Edit Profile
 
-![profile](public/screenshots/01.png)
+## Credits
+Bootstrap 5 based [Mazer 2.0](https://github.com/zuramai/mazer)
 
-### Edit User with role
+[Laravel](https://laravel.com/) Framework 9.x 
 
-![profile](public/screenshots/03.png)
+[Spatie Laravel Permissions](https://github.com/spatie/laravel-permission)
 
-### Role list
-
-![profile](public/screenshots/04.png)
-
-### Role edit
-
-![profile](public/screenshots/05.png)
+## License
+The MIT License (MIT). Please see [License](#license) File for more information.
