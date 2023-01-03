@@ -17,11 +17,11 @@
                         @method('PUT')
                         <div class="form-group">
                             <div class="crm-profile-img-edit position-relative">
-                                <img id="output" class="crm-profile-pic rounded avatar-100"
-                                    src="{{ asset('storage/' . $user->photo) }}" alt="profile-pic">
-                                <div class="crm-p-image bg-primary">
+                                <img id="output" class="img-fluid rounded avatar-100"
+                                    src="{{ asset('storage/' . $user->photo) }}" alt="">
+                                <div class="crm-p-image ">
                                     <i class="las la-pen upload-button"></i>
-                                    <input class="file-upload" type="file" onchange="loadFile(event)" name="photo"
+                                    <input class="file-upload btn btn-outline-primary" type="file" onchange="loadFile(event)" name="photo"
                                         accept="image/*">
                                 </div>
 
