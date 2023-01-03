@@ -43,15 +43,21 @@
                         <button class="btn btn-primary btn-block btn-lg shadow-lg mt-5">Log in</button>
                     </form>
                     <div class="text-center mt-5 text-lg fs-4">
-                        <p class="text-gray-600">Don't have an account? <a href="auth-register.html" class="font-bold">Sign
+                        <p class="text-gray-600">Don't have an account? <a href="{{ route('register') }}"
+                                class="font-bold">Sign
                                 up</a>.</p>
-                        <p><a class="font-bold" href="auth-forgot-password.html">Forgot password?</a>.</p>
+                        <p><a class="font-bold" href="{{ route('password.request') }}">Forgot password?</a>.</p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-7 d-none d-lg-block">
-                <div id="auth-right">
-
+                <div id="auth-right"
+                    style="background: url('https://images.unsplash.com/photo-1600954700722-b9a768fc9397?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1615&q=80') no-repeat; background-size: cover;">
+                    <div class="float-end pe-3">
+                        Image credit: <a
+                            href="https://images.unsplash.com/photo-1600954700722-b9a768fc9397?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1615&q=80"
+                            class=" fw-bold" target="_BLANK">Unsplash <i class="fa fa-external-link"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
