@@ -39,7 +39,7 @@
             <footer>
                 <div class="footer clearfix mb-0 text-muted">
                     <div class="float-start">
-                        <p>2021 &copy; Mazer</p>
+                        <p>Laravel Stater Kit by <a href="https://jabsainfotech.com">Jabsa Infotech(InnoWaysIT)</a></p>
                     </div>
                     <div class="float-end">
                         <p>Crafted with <span class="text-danger"><i class="bi bi-heart"></i></span> by <a
