@@ -28,8 +28,10 @@
                     <i class="fa fa-cog mr-1"></i> Edit
                     Profile</a>
                 <a href="#" class="list-group-item list-group-item-action text-orange"
-                    onclick="return $('#logout-form').submit();"><i class="fa fa-power-off mr-1"></i>
+                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i
+                        class="fa fa-power-off mr-1 text-danger"></i>
                     Logout</a>
+                <form action="{{ route('logout') }}" method="POST" id="logout-form">@csrf</form>
             </div>
         </div>
 
