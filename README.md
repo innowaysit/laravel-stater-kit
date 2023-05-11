@@ -24,14 +24,18 @@ docker run --rm -v $(pwd):/opt -w /opt laravelsail/php81-composer:latest compose
 ./vendor/bin/sail artisan key:generate
 ./vendor/bin/sail artisan migrate:fresh --seed
 ```
+
 ### Passport Api installation and configuring client id and secret
+
 If you need the api for authentication run the below command
+
 ```
 php artisan passport:install
 ```
 
 This will give sample output
 e.g.
+
 ```
 Personal access client created successfully.
 Client ID: 1
@@ -42,18 +46,20 @@ Client secret: qIiqHzXu58g7DQl8fKiSTFKRFcMzD0napwYi2W6l
 ```
 
 Paste any one of these keys in your .env file as below
+
 ```
 PASSPORT_PERSONAL_ACCESS_CLIENT_ID=1
 PASSPORT_PERSONAL_ACCESS_CLIENT_SECRET="idYopC1DiScLLkjXN7tPh8Wu3QxfViME6nJJurtd"
 ```
 
 # TODO
+
     - Multiple theme support
     - API support
 
 ## Made with
 
-    - Laravel 9.x
+    - Laravel 10.x
     - larave/ui package
     - Webkit Admin template
     - spatie/laravel-permission
@@ -63,10 +69,15 @@ PASSPORT_PERSONAL_ACCESS_CLIENT_SECRET="idYopC1DiScLLkjXN7tPh8Wu3QxfViME6nJJurtd
     - Mazer 2.0 Admin template
 
 ## Screenshots
+
 ### New Bs5 based Stunning Mazer 2.0 Admin theme
+
 ### Light Mode
+
 ![theme](public/screenshots/07.png)
+
 ### Dark Mode
+
 ![dark_theme](public/screenshots/08.png)
 
 ### Home
@@ -97,13 +108,14 @@ PASSPORT_PERSONAL_ACCESS_CLIENT_SECRET="idYopC1DiScLLkjXN7tPh8Wu3QxfViME6nJJurtd
 
 ![profile](public/screenshots/06.png)
 
-
 ## Credits
-Bootstrap 5 based [Mazer 2.0](https://github.com/zuramai/mazer)
 
-[Laravel](https://laravel.com/) Framework 9.x 
+[Laravel](https://laravel.com/) Framework 10.x
 
-[Spatie Laravel Permissions](https://github.com/spatie/laravel-permission)
+Theme: Bootstrap 5 based [Mazer 2.0](https://github.com/zuramai/mazer)
+
+Role management: [Spatie Laravel Permissions](https://github.com/spatie/laravel-permission)
 
 ## License
+
 The MIT License (MIT). Please see [License](#license) File for more information.
